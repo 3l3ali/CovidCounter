@@ -3,6 +3,7 @@
 }
 @section Styles {
     <link rel="stylesheet" href="~/css/home.css" type="text/css" asp-append-version="true">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 }
 @using CovidCounter.Models
 @model CovidModel
@@ -14,9 +15,17 @@
 else
 {
     <header>
-        <h2>Total COVID Cases</h2>
-        <h1 class="counter">@Model.Global.TotalConfirmed.ToString("N0")</h1>
-        
+        <div class="header-info-wrapper">
+            <h2>Total Cases</h2>
+            <h1 class="counter">@Model.Global.TotalConfirmed.ToString("N0")</h1>
+
+            <h2>Deaths</h2>
+            <h1 class="counter">@Model.Global.TotalDeaths.ToString("N0")</h1>
+
+            <h2>Recovered</h2>
+            <h1 class="counter recovered">@Model.Global.TotalRecovered.ToString("N0")</h1>
+        </div>
+
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
             <polygon fill="#E8E8E8" points="0,100 100,0 100,100"/>
         </svg>
