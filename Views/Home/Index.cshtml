@@ -1,8 +1,33 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@using CovidCounter.Models;
+@model CovidModel;
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@if(Model is null)
+{
+    <h4>Loading ...</h4>
+}
+else
+{
+    <div class="header">
+        <p>Total COVID Cases</p>
+        <span class="counter">@Model.Global.TotalConfirmed.ToString("G")</span>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            @foreach (SingleCountry c in Model.Countries)
+            {
+                <div class="col-12 col-md-4">
+                    <p>Total confirmed: @c.TotalConfirmed</p>
+                    <p>Total deaths: @c.TotalDeaths</p>
+                    <p>Total Recovered: @c.TotalRecovered</p>
+                    <p>New confirmed: @c.NewConfirmed</p>
+                    <p>New deaths: @c.NewDeaths</p>
+                    <p>New recovered: @c.NewRecovered</p>
+                </div>
+            }
+        </div>
+    </div>  
+}

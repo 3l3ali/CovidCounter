@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ie7uTl2uAj/2N+8LZijYKCDFd7uyLqWwx6OpsVC7FUEgw1ImVMYvD3MPrg5xyll409AD+NnA8xPTZyWRZbLrxQ==",
+  "dgSpecHash": "6tZEbAllbEcFe2ki9d0fd4uCAvFfdZbDgg/vRalUtDzgqawLBEV3qJu6n9P0Iq+2HJBx8XIEQa6PNuUavzPM3g==",
   "success": true,
   "projectFilePath": "/Users/Moe/code/3l3ali/PROJECTS/CovidCounter/CovidCounter.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,7 @@
     "/Users/Moe/.nuget/packages/system.io.filesystem.primitives/4.3.0/system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "/Users/Moe/.nuget/packages/system.linq/4.3.0/system.linq.4.3.0.nupkg.sha512",
     "/Users/Moe/.nuget/packages/system.net.http/4.3.2/system.net.http.4.3.2.nupkg.sha512",
+    "/Users/Moe/.nuget/packages/system.net.http.json/3.2.1/system.net.http.json.3.2.1.nupkg.sha512",
     "/Users/Moe/.nuget/packages/system.net.primitives/4.3.0/system.net.primitives.4.3.0.nupkg.sha512",
     "/Users/Moe/.nuget/packages/system.reflection/4.3.0/system.reflection.4.3.0.nupkg.sha512",
     "/Users/Moe/.nuget/packages/system.reflection.primitives/4.3.0/system.reflection.primitives.4.3.0.nupkg.sha512",
@@ -58,6 +59,7 @@
     "/Users/Moe/.nuget/packages/system.security.cryptography.x509certificates/4.3.0/system.security.cryptography.x509certificates.4.3.0.nupkg.sha512",
     "/Users/Moe/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
     "/Users/Moe/.nuget/packages/system.text.encoding.extensions/4.3.0/system.text.encoding.extensions.4.3.0.nupkg.sha512",
+    "/Users/Moe/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512",
     "/Users/Moe/.nuget/packages/system.text.regularexpressions/4.3.0/system.text.regularexpressions.4.3.0.nupkg.sha512",
     "/Users/Moe/.nuget/packages/system.threading/4.3.0/system.threading.4.3.0.nupkg.sha512",
     "/Users/Moe/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",

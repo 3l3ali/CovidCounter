@@ -6,32 +6,43 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CovidCounter.Models;
+using HtmlAgilityPack;
+using ScrapySharp.Network;
+using ScrapySharp.Extensions;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Net.Http.Json;
 
 namespace CovidCounter.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        static private string url = "https://api.covid19api.com/summary";
+        private readonly IHttpClientFactory _factory;
+        public HomeController(IHttpClientFactory factory)
         {
-            _logger = logger;
+            _factory = factory;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            CovidModel covid;
+
+            var request = new HttpRequestMessage(HttpMethod.Get, url);
+            var client = _factory.CreateClient();
+
+            HttpResponseMessage response = await client.SendAsync(request);
+            if (response.IsSuccessStatusCode)
+            {
+                covid = await response.Content.ReadFromJsonAsync<CovidModel>();
+            }
+            else
+            {
+                covid = null;
+            }
+
+            return View(covid);
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
     }
 }

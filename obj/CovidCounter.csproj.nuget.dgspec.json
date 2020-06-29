@@ -38,7 +38,11 @@
           "dependencies": {
             "ScrapySharp": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[3.0.0, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[3.2.1, )"
             }
           },
           "imports": [

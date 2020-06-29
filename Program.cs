@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using HtmlAgilityPack;
+using ScrapySharp.Extensions;
+using ScrapySharp.Network;
 
 namespace CovidCounter
 {
