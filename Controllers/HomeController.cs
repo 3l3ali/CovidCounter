@@ -12,6 +12,7 @@ using ScrapySharp.Extensions;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CovidCounter.Controllers
 {
@@ -35,6 +36,8 @@ namespace CovidCounter.Controllers
             if (response.IsSuccessStatusCode)
             {
                 covid = await response.Content.ReadFromJsonAsync<CovidModel>();
+                var countriesList = new SelectList(covid.Countries.ToDictionary(c => c.Country, c => c.Country), "Key", "Value");
+                ViewBag.countriesList = countriesList;
                 covid.Countries.Sort((a,b) => b.TotalConfirmed.CompareTo(a.TotalConfirmed));
             }
             else

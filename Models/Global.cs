@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 namespace CovidCounter.Models
 {
     public class Global
@@ -8,6 +11,5 @@ namespace CovidCounter.Models
         public int TotalDeaths { get; set; } 
         public int NewRecovered { get; set; } 
         public int TotalRecovered { get; set; } 
-
     }
 }

@@ -9,7 +9,4 @@ namespace CovidCounter.Models
         public List<SingleCountry> Countries { get; set; } 
         public DateTime Date { get; set; } 
     }
-
-
-    
 }
