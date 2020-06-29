@@ -1,14 +1,3 @@
-/* .header {
-    height: 100vh;
-    margin-top: -50vh;
-    margin-left: -30vh;
-    background-color: blue;
-    transform: rotate(-15deg);
-    margin-bottom: 200px;
-
-    width: 150vw;
-} */
-
 header {
     position: relative;
     height: 70vh;
@@ -134,3 +123,24 @@ height: 10vw;
   #up-btn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
+
+
+
+/*phones*/
+@media (max-width: 540px) {
+    header h2 {
+        font-size: 30px ;
+    }
+    header h1 {
+        font-size: 40px;
+    }
+}
+  /*small phones like iphone 5*/
+  @media (max-width: 350px) {
+    header h2 {
+        font-size: 25px ;
+    }
+    header h1 {
+        font-size: 30px;
+    } 
+}
