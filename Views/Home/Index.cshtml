@@ -1,8 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-@using CovidCounter.Models;
-@model CovidModel;
+@section Styles {
+    <link rel="stylesheet" href="~/css/home.css" type="text/css" asp-append-version="true">
+}
+@using CovidCounter.Models
+@model CovidModel
 
 @if(Model is null)
 {
@@ -10,22 +13,56 @@
 }
 else
 {
-    <div class="header">
-        <p>Total COVID Cases</p>
-        <span class="counter">@Model.Global.TotalConfirmed.ToString("G")</span>
-    </div>
+    <header>
+        <h2>Total COVID Cases</h2>
+        <h1 class="counter">@Model.Global.TotalConfirmed.ToString("N0")</h1>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="#E8E8E8" points="0,100 100,0 100,100"/>
+        </svg>
+    </header>
 
     <div class="container">
         <div class="row">
             @foreach (SingleCountry c in Model.Countries)
             {
-                <div class="col-12 col-md-4">
-                    <p>Total confirmed: @c.TotalConfirmed</p>
-                    <p>Total deaths: @c.TotalDeaths</p>
-                    <p>Total Recovered: @c.TotalRecovered</p>
-                    <p>New confirmed: @c.NewConfirmed</p>
-                    <p>New deaths: @c.NewDeaths</p>
-                    <p>New recovered: @c.NewRecovered</p>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="country-wrapper">
+                        <div class="country-title-wrapper text-center">
+                            <h4>@c.Country</h4>
+                            <img src="@c.GetImagePath()" alt="">
+                        </div>
+                        <div class="sperator">
+                            <div class="divider div-transparent"></div>
+                        </div>
+                        <table class="country-table">
+                            
+                            <tr>
+                                <td>Total Confirmed</td>
+                                <td> @c.TotalConfirmed</td>
+                            </tr>
+                            <tr>
+                                <td>Total Deaths</td>
+                                <td>@c.TotalDeaths</td>
+                            </tr>
+                            <tr>
+                                <td>Total Recovered</td>
+                                <td>@c.TotalRecovered</td>
+                            </tr>
+                            <tr>
+                                <td>New Confirmed</td>
+                                <td>@c.NewConfirmed</td>
+                            </tr>
+                            <tr>
+                                <td>New Deaths</td>
+                                <td>@c.NewDeaths</td>
+                            </tr>
+                            <tr>
+                                <td>New Recovered</td>
+                                <td>@c.NewRecovered</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             }
         </div>

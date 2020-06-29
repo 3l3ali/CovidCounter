@@ -35,12 +35,13 @@ namespace CovidCounter.Controllers
             if (response.IsSuccessStatusCode)
             {
                 covid = await response.Content.ReadFromJsonAsync<CovidModel>();
+                covid.Countries.Sort((a,b) => b.TotalConfirmed.CompareTo(a.TotalConfirmed));
             }
             else
             {
                 covid = null;
             }
-
+            
             return View(covid);
         }
 
