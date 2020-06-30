@@ -60,3 +60,8 @@
 /Users/Moe/code/3l3ali/PROJECTS/CovidCounter/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/Moe/code/3l3ali/PROJECTS/CovidCounter/bin/Debug/netcoreapp3.1/System.Net.Http.Json.dll
 /Users/Moe/code/3l3ali/PROJECTS/CovidCounter/bin/Debug/netcoreapp3.1/System.Text.Json.dll
+/Users/Moe/code/3l3ali/PROJECTS/CovidCounter/bin/Debug/netcoreapp3.1/publish/web.config
+/Users/Moe/code/3l3ali/PROJECTS/CovidCounter/bin/Debug/netcoreapp3.1/publish/appsettings.Development.json
+/Users/Moe/code/3l3ali/PROJECTS/CovidCounter/bin/Debug/netcoreapp3.1/publish/appsettings.json
+/Users/Moe/code/3l3ali/PROJECTS/CovidCounter/bin/Debug/netcoreapp3.1/publish/CovidCounter.deps.json
+/Users/Moe/code/3l3ali/PROJECTS/CovidCounter/bin/Debug/netcoreapp3.1/publish/CovidCounter.runtimeconfig.json
