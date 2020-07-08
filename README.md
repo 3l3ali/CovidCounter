@@ -1,4 +1,4 @@
-# 🏥 CovidCounter
+# 🏥🩺 CovidCounter
 Latest COVID-19 numbers globally and individual countries
 
 # 🔥 Technologies  
